@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, CreditCard, Building, Shield, HelpCircle } from 'lucide-react';
 
 const Header = () => {
@@ -28,10 +28,10 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">F</span>
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-purple-600 to-purple-400 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg md:text-xl">F</span>
             </div>
-            <span className="text-white text-2xl font-bold">FlowPay</span>
+            <span className="text-white text-xl md:text-2xl font-bold">FlowPay</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -118,10 +118,10 @@ const Header = () => {
                 <span>FAQ</span>
               </button>
               <div className="pt-4 border-t border-purple-500/20 space-y-3">
-                <button className="text-purple-400 hover:text-purple-300 w-full text-left">
+                <button className="text-purple-400 hover:text-purple-300 w-full text-left py-2">
                   Entrar
                 </button>
-                <button className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold w-full">
+                <button className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold w-full text-center">
                   Abrir Conta
                 </button>
               </div>

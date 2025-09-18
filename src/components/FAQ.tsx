@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle, User, Building, CreditCard, Shield } from 'lucide-react';
 
 const FAQ = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(0);
 
-  const faqData = [
+  const faqData = useMemo(() => [
     {
       category: "Geral",
       icon: <HelpCircle className="w-5 h-5" />,
@@ -103,50 +103,42 @@ const FAQ = () => {
         }
       ]
     }
-  ];
-
-  const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
+  ], []);
 
   return (
-    <section id="faq" className="py-20 bg-black text-white">
+    <section id="faq" className="py-12 md:py-20 bg-black text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-2 text-sm mb-6">
-            <HelpCircle className="w-4 h-4 text-purple-400" />
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center space-x-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm mb-4 md:mb-6">
+            <HelpCircle className="w-3 h-3 md:w-4 md:h-4 text-purple-400" />
             <span className="text-purple-300">Perguntas Frequentes</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
             Tire suas
             <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
               {' '}dúvidas
             </span>
           </h2>
           
-          <p className="text-xl text-gray-300">
+          <p className="text-lg md:text-xl text-gray-300">
             Respostas para as principais dúvidas sobre FlowPay. 
             Não encontrou o que procura? Fale conosco!
           </p>
         </div>
 
-        {/* FAQ Categories */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {faqData.map((category, categoryIndex) => (
             <div key={categoryIndex} className="bg-gray-900/50 border border-gray-700 rounded-2xl overflow-hidden">
-              {/* Category Header */}
-              <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-6 py-4 border-b border-gray-700">
+              <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-4 md:px-6 py-3 md:py-4 border-b border-gray-700">
                 <div className="flex items-center space-x-3">
                   <div className="text-purple-400">
                     {category.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{category.category}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold text-white">{category.category}</h3>
                 </div>
               </div>
 
-              {/* Questions */}
               <div className="divide-y divide-gray-700">
                 {category.questions.map((faq, questionIndex) => {
                   const globalIndex = categoryIndex * 100 + questionIndex;
@@ -155,11 +147,11 @@ const FAQ = () => {
                   return (
                     <div key={questionIndex}>
                       <button
-                        onClick={() => toggleFAQ(globalIndex)}
-                        className="w-full px-6 py-6 text-left hover:bg-gray-800/50 transition-colors"
+                        onClick={() => setOpenFAQ(openFAQ === globalIndex ? null : globalIndex)}
+                        className="w-full px-4 md:px-6 py-4 md:py-6 text-left hover:bg-gray-800/50 transition-colors"
                       >
                         <div className="flex items-center justify-between">
-                          <h4 className="text-lg font-medium text-white pr-4">
+                          <h4 className="text-base md:text-lg font-medium text-white pr-4">
                             {faq.question}
                           </h4>
                           <div className="text-purple-400 flex-shrink-0">
@@ -173,8 +165,8 @@ const FAQ = () => {
                       </button>
                       
                       {isOpen && (
-                        <div className="px-6 pb-6 -mt-2">
-                          <div className="text-gray-300 leading-relaxed border-l-4 border-purple-500 pl-4 bg-purple-500/5 py-4 rounded-r-lg">
+                        <div className="px-4 md:px-6 pb-4 md:pb-6 -mt-2">
+                          <div className="text-gray-300 leading-relaxed border-l-4 border-purple-500 pl-4 bg-purple-500/5 py-4 rounded-r-lg text-sm md:text-base">
                             {faq.answer}
                           </div>
                         </div>
@@ -187,25 +179,24 @@ const FAQ = () => {
           ))}
         </div>
 
-        {/* Contact CTA */}
-        <div className="mt-16 text-center bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700">
-          <h3 className="text-2xl font-bold mb-4">
+        <div className="mt-16 text-center bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-6 md:p-8 border border-gray-700">
+          <h3 className="text-xl md:text-2xl font-bold mb-4">
             Ainda tem dúvidas?
           </h3>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-300 mb-6 text-sm md:text-base">
             Nossa equipe está pronta para ajudar você 24 horas por dia, 7 dias por semana.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm md:text-base">
               Chat ao Vivo
             </button>
-            <button className="border border-purple-500 text-purple-400 hover:bg-purple-500/10 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:border-purple-400">
+            <button className="border border-purple-500 text-purple-400 hover:bg-purple-500/10 px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 hover:border-purple-400 text-sm md:text-base">
               WhatsApp
             </button>
           </div>
           
-          <p className="text-gray-400 text-sm mt-4">
+          <p className="text-gray-400 text-xs md:text-sm mt-4">
             Resposta em menos de 2 minutos • Suporte especializado
           </p>
         </div>

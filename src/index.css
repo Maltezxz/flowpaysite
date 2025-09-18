@@ -98,6 +98,131 @@ input:focus {
     font-size: 16px;
     line-height: 1.5;
   }
+  
+  /* Mobile-specific adjustments */
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-text-base {
+    font-size: 1rem;
+  }
+  
+  .mobile-text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .mobile-text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .mobile-text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .mobile-text-3xl {
+    font-size: 1.875rem;
+  }
+  
+  .mobile-text-4xl {
+    font-size: 2.25rem;
+  }
+  
+  /* Mobile spacing */
+  .mobile-py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .mobile-py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .mobile-py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .mobile-mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mobile-mb-8 {
+    margin-bottom: 2rem;
+  }
+  
+  /* Mobile grid adjustments */
+  .mobile-grid-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .mobile-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  /* Mobile flex adjustments */
+  .mobile-flex-col {
+    flex-direction: column;
+  }
+  
+  .mobile-flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+  
+  /* Mobile gap adjustments */
+  .mobile-gap-2 {
+    gap: 0.5rem;
+  }
+  
+  .mobile-gap-3 {
+    gap: 0.75rem;
+  }
+  
+  .mobile-gap-4 {
+    gap: 1rem;
+  }
+  
+  .mobile-gap-6 {
+    gap: 1.5rem;
+  }
+  
+  /* Mobile button adjustments */
+  .mobile-btn-full {
+    width: 100%;
+  }
+  
+  .mobile-btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+  }
+  
+  /* Mobile card adjustments */
+  .mobile-card-padding {
+    padding: 1rem;
+  }
+  
+  /* Mobile hero adjustments */
+  .mobile-hero-height {
+    min-height: 100vh;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Mobile section spacing */
+  .mobile-section-py {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 /* High contrast mode support */

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin, Youtube, Smartphone, Building, CreditCard, Shield, HelpCircle } from 'lucide-react';
 
 const Footer = () => {
@@ -13,42 +12,42 @@ const Footer = () => {
     <footer className="bg-black text-white border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid lg:grid-cols-5 gap-8">
+        <div className="py-12 md:py-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
             {/* Brand */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-400 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">F</span>
+            <div className="sm:col-span-2 lg:col-span-2">
+              <div className="flex items-center space-x-2 mb-4 md:mb-6">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-purple-600 to-purple-400 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg md:text-xl">F</span>
                 </div>
-                <span className="text-white text-2xl font-bold">FlowPay</span>
+                <span className="text-white text-xl md:text-2xl font-bold">FlowPay</span>
               </div>
               
-              <p className="text-gray-400 mb-6 max-w-md">
+              <p className="text-gray-400 mb-4 md:mb-6 max-w-md text-sm md:text-base">
                 A plataforma completa que combina gateway de pagamentos e banco digital. 
                 Tecnologia financeira de ponta para pessoas e empresas.
               </p>
               
-              <div className="space-y-3">
+              <div className="space-y-2 md:space-y-3">
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-purple-400" />
-                  <span className="text-gray-400">contato@flowpay.com</span>
+                  <Mail className="w-4 h-4 md:w-5 md:h-5 text-purple-400" />
+                  <span className="text-gray-400 text-sm md:text-base">contato@flowpay.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-purple-400" />
-                  <span className="text-gray-400">(21) 99999-0000</span>
+                  <Phone className="w-4 h-4 md:w-5 md:h-5 text-purple-400" />
+                  <span className="text-gray-400 text-sm md:text-base">(21) 99999-0000</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-purple-400" />
-                  <span className="text-gray-400">Rio de Janeiro, Brasil</span>
+                  <MapPin className="w-4 h-4 md:w-5 md:h-5 text-purple-400" />
+                  <span className="text-gray-400 text-sm md:text-base">Rio de Janeiro, Brasil</span>
                 </div>
               </div>
             </div>
 
             {/* Produtos */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Produtos</h4>
-              <div className="space-y-3">
+              <h4 className="text-white font-semibold mb-3 md:mb-4 text-sm md:text-base">Produtos</h4>
+              <div className="space-y-2 md:space-y-3">
                 <button 
                   onClick={() => scrollToSection('banco')}
                   className="flex items-center space-x-2 text-gray-400 hover:text-purple-400 transition-colors w-full text-left"
@@ -76,8 +75,8 @@ const Footer = () => {
 
             {/* Empresa */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Empresa</h4>
-              <div className="space-y-3">
+              <h4 className="text-white font-semibold mb-3 md:mb-4 text-sm md:text-base">Empresa</h4>
+              <div className="space-y-2 md:space-y-3">
                 <div className="text-gray-400 hover:text-purple-400 transition-colors cursor-pointer">
                   Sobre nós
                 </div>

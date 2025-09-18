@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Lock, Eye, FileCheck, Server, Zap, AlertTriangle, CheckCircle } from 'lucide-react';
 
 const Seguranca = () => {
@@ -43,35 +42,35 @@ const Seguranca = () => {
   ];
 
   return (
-    <section id="seguranca" className="py-20 bg-gradient-to-b from-black to-gray-900 text-white">
+    <section id="seguranca" className="py-12 md:py-20 bg-gradient-to-b from-black to-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-green-500/20 border border-green-500/30 rounded-full px-4 py-2 text-sm mb-6">
-            <Shield className="w-4 h-4 text-green-400" />
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center space-x-2 bg-green-500/20 border border-green-500/30 rounded-full px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm mb-4 md:mb-6">
+            <Shield className="w-3 h-3 md:w-4 md:h-4 text-green-400" />
             <span className="text-green-300">Segurança Máxima</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
             Seu dinheiro
             <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent block">
               100% Protegido
             </span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
             Utilizamos a tecnologia de segurança mais avançada do mundo financeiro. 
             Seus dados e seu dinheiro estão protegidos com padrão bancário internacional.
           </p>
         </div>
 
         {/* Security Shield Visual */}
-        <div className="relative mb-16">
+        <div className="relative mb-12 md:mb-16">
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-64 h-64 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-full border-4 border-green-500/30 flex items-center justify-center">
-                <div className="w-48 h-48 bg-gradient-to-br from-green-600/30 to-green-500/30 rounded-full border-2 border-green-400/50 flex items-center justify-center">
-                  <Shield className="w-24 h-24 text-green-400" />
+              <div className="w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-full border-4 border-green-500/30 flex items-center justify-center">
+                <div className="w-36 h-36 md:w-48 md:h-48 bg-gradient-to-br from-green-600/30 to-green-500/30 rounded-full border-2 border-green-400/50 flex items-center justify-center">
+                  <Shield className="w-16 h-16 md:w-24 md:h-24 text-green-400" />
                 </div>
               </div>
               
