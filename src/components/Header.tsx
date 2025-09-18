@@ -26,7 +26,7 @@ const Header = () => {
       isScrolled ? 'bg-black/95 backdrop-blur-md border-b border-purple-500/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 md:py-4">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-purple-600 to-purple-400 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg md:text-xl">F</span>
@@ -88,7 +88,7 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-purple-500/20">
-            <div className="py-4 space-y-4">
+            <div className="py-4 space-y-3">
               <button 
                 onClick={() => scrollToSection('gateway')}
                 className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 w-full text-left"
@@ -118,10 +118,10 @@ const Header = () => {
                 <span>FAQ</span>
               </button>
               <div className="pt-4 border-t border-purple-500/20 space-y-3">
-                <button className="text-purple-400 hover:text-purple-300 w-full text-left py-2">
+                <button className="text-purple-400 hover:text-purple-300 w-full text-left py-2 text-sm">
                   Entrar
                 </button>
-                <button className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold w-full text-center">
+                <button className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-4 py-2.5 rounded-lg font-semibold w-full text-center text-sm">
                   Abrir Conta
                 </button>
               </div>

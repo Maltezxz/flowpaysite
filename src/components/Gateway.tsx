@@ -67,13 +67,13 @@ const Gateway = () => {
         </div>
 
         {/* Payment Methods */}
-        <div className="mb-12 md:mb-16">
-          <h3 className="text-xl md:text-2xl font-semibold text-center mb-6 md:mb-8">Métodos de Pagamento Aceitos</h3>
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-6 md:mb-8">
+        <div className="mb-8 md:mb-16">
+          <h3 className="text-lg md:text-2xl font-semibold text-center mb-4 md:mb-8">Métodos de Pagamento Aceitos</h3>
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-4 md:mb-8">
             {paymentMethods.map((method, index) => (
-              <div key={index} className="flex items-center space-x-2 bg-gray-900 border border-gray-700 rounded-lg px-3 md:px-4 py-1.5 md:py-2 hover:border-purple-500/50 transition-colors">
-                <div className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${method.color}`} />
-                <span className="text-gray-300 text-sm md:text-base">{method.name}</span>
+              <div key={index} className="flex items-center space-x-1 md:space-x-2 bg-gray-900 border border-gray-700 rounded-lg px-2 md:px-4 py-1 md:py-2 hover:border-purple-500/50 transition-colors">
+                <div className={`w-1.5 h-1.5 md:w-3 md:h-3 rounded-full ${method.color}`} />
+                <span className="text-gray-300 text-xs md:text-base">{method.name}</span>
               </div>
             ))}
           </div>

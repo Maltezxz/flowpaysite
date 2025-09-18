@@ -59,10 +59,10 @@ const BancoDigital = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center mb-12 md:mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-16">
           {/* App Mockup */}
-          <div className="relative order-first lg:order-last">
-            <div className="mx-auto w-72 h-[500px] md:w-80 md:h-[600px] bg-gradient-to-b from-gray-900 to-gray-800 rounded-3xl p-2 md:p-3 shadow-2xl border border-gray-700">
+          <div className="relative order-2 lg:order-last mt-8 lg:mt-0">
+            <div className="mx-auto w-64 h-[450px] md:w-80 md:h-[600px] bg-gradient-to-b from-gray-900 to-gray-800 rounded-3xl p-2 md:p-3 shadow-2xl border border-gray-700">
               <div className="w-full h-full bg-black rounded-2xl overflow-hidden relative">
                 {/* Phone Screen Content */}
                 <div className="p-4 md:p-6 space-y-4 md:space-y-6">
@@ -176,21 +176,21 @@ const BancoDigital = () => {
           </div>
 
           {/* Features */}
-          <div className="space-y-8">
-            <div className="grid gap-6">
+          <div className="space-y-6 md:space-y-8 order-1 lg:order-first">
+            <div className="grid gap-4 md:gap-6">
               {features.map((feature, index) => (
                 <div 
                   key={index} 
-                  className="group flex items-start space-x-4 p-6 bg-gray-900/50 border border-gray-700 rounded-2xl hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300"
+                  className="group flex items-start space-x-3 md:space-x-4 p-4 md:p-6 bg-gray-900/50 border border-gray-700 rounded-2xl hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300"
                 >
                   <div className="text-purple-400 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-lg md:text-xl font-semibold mb-2 text-white group-hover:text-purple-300 transition-colors">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm md:text-base">
                       {feature.description}
                     </p>
                   </div>

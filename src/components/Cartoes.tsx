@@ -48,13 +48,13 @@ const Cartoes = () => {
         </div>
 
         {/* Cards Display */}
-        <div className="relative mb-12 md:mb-16">
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+        <div className="relative mb-8 md:mb-16">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
             {/* Physical Card */}
             <div className="relative group">
-              <div className="w-72 h-44 md:w-80 md:h-48 bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700 rounded-2xl shadow-2xl transform rotate-6 md:rotate-12 group-hover:rotate-3 md:group-hover:rotate-6 transition-transform duration-500">
+              <div className="w-64 h-40 md:w-80 md:h-48 bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700 rounded-2xl shadow-2xl transform rotate-3 md:rotate-12 group-hover:rotate-0 md:group-hover:rotate-6 transition-transform duration-500">
                 <div className="absolute inset-0 bg-black/20 rounded-2xl" />
-                <div className="relative p-6 h-full flex flex-col justify-between text-white">
+                <div className="relative p-4 md:p-6 h-full flex flex-col justify-between text-white">
                   <div className="flex justify-between items-start">
                     <div>
                       <div className="text-sm opacity-80">FlowPay</div>
@@ -66,10 +66,10 @@ const Cartoes = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <div className="text-lg font-mono tracking-wider">
+                    <div className="text-sm md:text-lg font-mono tracking-wider">
                       **** **** **** 1234
                     </div>
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-xs md:text-sm">
                       <span>MARIA SILVA</span>
                       <span>12/28</span>
                     </div>
@@ -86,9 +86,9 @@ const Cartoes = () => {
 
             {/* Virtual Card */}
             <div className="relative group">
-              <div className="w-72 h-44 md:w-80 md:h-48 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 rounded-2xl shadow-2xl border border-purple-500/30 transform -rotate-6 md:-rotate-12 group-hover:-rotate-3 md:group-hover:-rotate-6 transition-transform duration-500">
+              <div className="w-64 h-40 md:w-80 md:h-48 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 rounded-2xl shadow-2xl border border-purple-500/30 transform -rotate-3 md:-rotate-12 group-hover:rotate-0 md:group-hover:-rotate-6 transition-transform duration-500">
                 <div className="absolute inset-0 bg-purple-500/10 rounded-2xl" />
-                <div className="relative p-6 h-full flex flex-col justify-between text-white">
+                <div className="relative p-4 md:p-6 h-full flex flex-col justify-between text-white">
                   <div className="flex justify-between items-start">
                     <div>
                       <div className="text-sm opacity-80">FlowPay</div>
